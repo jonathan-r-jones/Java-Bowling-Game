@@ -146,9 +146,11 @@ public class BowlingGameTest {
         String input = "9/-/XX627/8/X9-9/9";
         assertEquals(167, game.scoreOfGame(input));
     }
+
+    // This is a bug in the code. 168 seems to be
+    // an impossible game according this test!
     @Test
     public void FinalBallBug_168(){
-        // This is a bug in the code. 168 is impossible!
         String input = "9/-/XX627/8/X9-9/X";
         assertEquals(168, game.scoreOfGame(input));
     }
